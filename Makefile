@@ -2,7 +2,8 @@ NAME=awsp
 VERSION=0.1.0
 
 DEPEND=golang.org/x/tools/cmd/cover \
-		github.com/mattn/goveralls
+		github.com/mattn/goveralls \
+		github.com/golang/dep/cmd/dep
 
 DATE=$(shell date '+%F %T')
 TRAVIS_COMMIT?=$(shell git symbolic-ref HEAD | cut -d"/" -f 3)
