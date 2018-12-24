@@ -17,8 +17,8 @@ $(NAME): $(shell find . -name \*.go)
 	go build -ldflags "$(VFLAG)" -o $(NAME) .
 
 build: $(NAME) \
+		build/$(NAME)-darwin-amd64.tgz \
 		build/$(NAME)-linux-amd64.tgz
-		# build/$(NAME)-darwin-amd64.tgz
 
 build/$(NAME)-%.tgz: *.go
 	rm -rf build/$(NAME)
