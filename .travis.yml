@@ -15,7 +15,8 @@ script:
 
 deploy:
   provider: releases
-  github-token: $GH_TOKEN
+  api_key:
+    secure: $GH_TOKEN
   file_glob: true
   file: build/*
   skip_cleanup: true
